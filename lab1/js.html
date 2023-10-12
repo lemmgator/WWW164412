@@ -4,7 +4,9 @@
 	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Content-Language" content="pl" />
 	<meta name="Author" content="Sebastian Minkowski" />
-	<title>@lemmgator - My hobby</title>
+	<title>@lemmgator - js</title>
+	<script src="kolorujtlo.js" type="text/javascript"></script>
+	<script src="timedate.js" type="text/javascript"></script>
 </head>
 
 <style>
@@ -22,8 +24,6 @@
 		font-family: Courier New;
 		font-size: 125%;
 		text-align: center;
-		background-color: black;
-		color: white;
 	}
 	h1 {color: #FE3B1F;}
 	a:link {color: #FE3B1F;}
@@ -33,20 +33,16 @@
 	p {line-height: 1.5}
 </style>
 
-<body>
-	<table style="width: 100%">
-		<tr>
-			<td><a href="./main.html">Main</td>
-			<td><a href="./breakcore.html">Breakcore</td>
-			<td><a href="./inspiration.html">Inspiration</td>
-			<td><a href="./music.html">My Music</td>
-			<td><a href="./audio.html">Audio Services</td>
-			<td><a href="./contacts.html">Contacts</td>
-		</tr>
-	</table>
+<body onload="startclock()">
 	
-	<h1>Welcome!</h1>
-	<h2>Make yourself at home.</h2>
-	<a href="./js.html"><img src="./img/lemm.png" alt="lemm working on tunes"></a>
+	<FORM METHOD="POST" NAME="background">
+		<INPUT TYPE="button" VALUE="lemmowy" ONCLICK="changeBackground('#FE3B1F')">
+		<INPUT TYPE="button" VALUE="czerwony" ONCLICK="changeBackground('#FF0000')">
+		<INPUT TYPE="button" VALUE="zielony" ONCLICK="changeBackground('#00FF00')">
+		<INPUT TYPE="button" VALUE="niebieski" ONCLICK="changeBackground('#0000FF')">
+	</FORM>
+	<hr>
+	<div id="zegarek"></div>
+	<div id="data"></div>
 </body>
 </html>
