@@ -7,31 +7,10 @@
 	<title>@lemmgator - js</title>
 	<script src="kolorujtlo.js" type="text/javascript"></script>
 	<script src="timedate.js" type="text/javascript"></script>
-</head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css"/>
 
-<style>
-	table {
-		border: 1px solid white; 
-		border-collapse: collapse;
-	}
-	td, th {
-		text-align: center;
-		border: 3px solid white;
-		width: 16%;
-		padding: 15px;
-	}
-	body {
-		font-family: Courier New;
-		font-size: 125%;
-		text-align: center;
-	}
-	h1 {color: #FE3B1F;}
-	a:link {color: #FE3B1F;}
-	a:hover {color: white;}
-	a:visited {color: gray;}
-	a:active {color: black;}
-	p {line-height: 1.5}
-</style>
+</head>
 
 <body onload="startclock()">
 	
@@ -44,5 +23,47 @@
 	<hr>
 	<div id="zegarek"></div>
 	<div id="data"></div>
+	
+	<div id="animacjaTestowa1" class="test-block">Kliknij, a się powiększe</div>
+	<script>
+		$("#animacjaTestowa1").on("click",function(){
+			$(this).animate({
+				width:"500px",
+				opacity:0.4,
+				fontSize:"3em",
+				borderWidth:"10px"
+			},1500);
+		});
+	</script>
+	
+	<div id="animacjaTestowa2" class="test-block">Najedź kursorem, a się powiększe</div>
+	<script>
+		$("#animacjaTestowa2").on({
+			"mouseover":function(){
+				$(this).animate({
+					width:300
+				}, 800);
+			},
+			"mouseout":function(){
+				$(this).animate({
+					width:200
+				},800);
+			}
+		});
+	</script>
+	
+	<div id="animacjaTestowa3" class="test-block">Klikaj abym urósł</div>
+	<script>
+		$("#animacjaTestowa3").on("click",function(){
+			if(!$(this).is(":animated")){
+				$(this).animate({
+					width:"+="+50,
+					height:"+="+10,
+					opacity:"-="+0.1,
+					duration:3000
+				});
+			}
+		});
+	</script>
 </body>
 </html>
