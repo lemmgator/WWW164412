@@ -1,0 +1,112 @@
+body {
+    background-color: black;
+	color: white;
+	font-family: Courier New;
+	font-size: 125%;
+	text-align: left;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid black; 
+	border-collapse: collapse;
+
+}
+
+td, th {
+	text-align: left;
+	border: 3px solid black;
+	padding: 15px;
+}
+
+h1 {color: #FE3B1F;}
+a:link {color: #FE3B1F;}
+a:hover {color: white;}
+a:visited {color: gray;}
+a:active {color: black;}
+p {line-height: 1.5;}
+
+.logowanie{
+	text-align: justify;
+	position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.naglowek{
+	text-align: center;
+}
+
+.tdid{
+	text-align: right;
+}
+
+.tdnazwa{
+	text-align: left;
+}
+
+.tdedytuj{
+	background-color: white;
+	border: 3px solid white;
+}
+
+.tnie{
+	border: 3px solid white;
+	background-color: #FE3B1F;
+	text-align: center;
+}
+
+.ttak{
+	border: 3px solid white;
+	background-color: #50C878;
+	text-align: center;
+}
+
+.tn{
+	border: 3px solid white;
+}
+
+.tb{
+	border: 3px solid white;
+	text-align: center;
+}
+
+.te{
+	border: 0px solid white;
+	text-align: center;
+}
+
+.tdane{
+	border: 3px solid white;
+}
+
+.topis{
+	border: 3px solid white;
+	max-width:500px;
+}
+
+.tdid{
+	background-color: #FE3B1F;
+	border: 3px solid white;
+}
+
+.tdnazwa{
+	background-color: #5a7ffa;
+	border: 2px solid black;
+}
+
+.col{
+	float: left;
+    width: 50%;
+}
+.colskrol{
+	float: right;
+    width: 50%;
+
+}
+.row{
+	display: table;
+	width: 100%;
+}
